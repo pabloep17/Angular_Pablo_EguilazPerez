@@ -1,0 +1,15 @@
+<div>
+    <p class="crono_numer">{{formatNumber(contadorValue)}}</p>
+    <div class="crono_buttons_container">
+        <button *ngIf="playing == false;" (click)="play()">Play</button>
+        <button *ngIf="playing == true;"(click)="stop()">Stop</button>
+        <button (click)="record()">Record</button>
+    </div>
+    <app-lapso [lapsos]="lapsos"></app-lapso>
+    <div style="
+        display: flex;
+        justify-content: center;
+    ">
+        <a routerLink="" class="volver">Volver</a>
+    </div>
+</div>
